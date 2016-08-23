@@ -38,6 +38,7 @@
 		7F7B72D51CEF05C5006B3689 /* SociologyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7B72D41CEF05C5006B3689 /* SociologyViewController.m */; };
 		7F7FB7001D6C1F6D003F5FAC /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7FB6FF1D6C1F6D003F5FAC /* NewsDetailViewController.m */; };
 		7F7FB7031D6C21C0003F5FAC /* DetailWebModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7FB7021D6C21C0003F5FAC /* DetailWebModel.m */; };
+		7F7FB7061D6C3576003F5FAC /* DetailImageWebModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7FB7051D6C3576003F5FAC /* DetailImageWebModel.m */; };
 		7FA734AA1CEC6CA600185EE7 /* MainNavigatioinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA734A91CEC6CA600185EE7 /* MainNavigatioinView.m */; };
 		7FA734AD1CEC780400185EE7 /* MainTitleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA734AC1CEC780400185EE7 /* MainTitleCollectionViewCell.m */; };
 		7FA734B11CEC7C7300185EE7 /* libAPIStoreSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA734B01CEC7C7300185EE7 /* libAPIStoreSDK.a */; };
@@ -155,6 +156,8 @@
 		7F7FB6FF1D6C1F6D003F5FAC /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
 		7F7FB7011D6C21C0003F5FAC /* DetailWebModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailWebModel.h; sourceTree = "<group>"; };
 		7F7FB7021D6C21C0003F5FAC /* DetailWebModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWebModel.m; sourceTree = "<group>"; };
+		7F7FB7041D6C3576003F5FAC /* DetailImageWebModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailImageWebModel.h; sourceTree = "<group>"; };
+		7F7FB7051D6C3576003F5FAC /* DetailImageWebModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailImageWebModel.m; sourceTree = "<group>"; };
 		7FA734A81CEC6CA600185EE7 /* MainNavigatioinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigatioinView.h; sourceTree = "<group>"; };
 		7FA734A91CEC6CA600185EE7 /* MainNavigatioinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigatioinView.m; sourceTree = "<group>"; };
 		7FA734AB1CEC780400185EE7 /* MainTitleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTitleCollectionViewCell.h; sourceTree = "<group>"; };
@@ -414,6 +417,8 @@
 				7FC61A0E1CF45FD600838A51 /* NewDataFrame.m */,
 				7F7FB7011D6C21C0003F5FAC /* DetailWebModel.h */,
 				7F7FB7021D6C21C0003F5FAC /* DetailWebModel.m */,
+				7F7FB7041D6C3576003F5FAC /* DetailImageWebModel.h */,
+				7F7FB7051D6C3576003F5FAC /* DetailImageWebModel.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1022,6 +1027,7 @@
 				7F6592341CB00BDC00C713CC /* BBJTabBar.m in Sources */,
 				7FC19E691CB38B9E0069FCDC /* ToolUtil.m in Sources */,
 				7FC61A051CF3F71A00838A51 /* UIView+SDExtension.m in Sources */,
+				7F7FB7061D6C3576003F5FAC /* DetailImageWebModel.m in Sources */,
 				7FC619FF1CF3F71A00838A51 /* TAAbstractDotView.m in Sources */,
 				7FC61A081CF45ECE00838A51 /* NewData.m in Sources */,
 				7F6591F11CAF630400C713CC /* ViewController.m in Sources */,
