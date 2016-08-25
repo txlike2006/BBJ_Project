@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F3069F91D6D8356001C10F2 /* DataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3069F81D6D8356001C10F2 /* DataBase.m */; };
+		7F3069FC1D6D8CD9001C10F2 /* CollectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3069FB1D6D8CD9001C10F2 /* CollectModel.m */; };
+		7F3069FF1D6D8EB5001C10F2 /* PhotoCollectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3069FE1D6D8EB5001C10F2 /* PhotoCollectModel.m */; };
 		7F5266311CB4A21400A9DD03 /* BBJTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5266301CB4A21400A9DD03 /* BBJTableViewController.m */; };
 		7F5266341CB4A66A00A9DD03 /* BBJTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5266331CB4A66900A9DD03 /* BBJTableViewCell.m */; };
 		7F5266481CB4B40800A9DD03 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5266431CB4B40800A9DD03 /* ActivityViewController.m */; };
@@ -91,6 +94,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F3069F71D6D8356001C10F2 /* DataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBase.h; sourceTree = "<group>"; };
+		7F3069F81D6D8356001C10F2 /* DataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBase.m; sourceTree = "<group>"; };
+		7F3069FA1D6D8CD9001C10F2 /* CollectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectModel.h; sourceTree = "<group>"; };
+		7F3069FB1D6D8CD9001C10F2 /* CollectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectModel.m; sourceTree = "<group>"; };
+		7F3069FD1D6D8EB5001C10F2 /* PhotoCollectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectModel.h; sourceTree = "<group>"; };
+		7F3069FE1D6D8EB5001C10F2 /* PhotoCollectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectModel.m; sourceTree = "<group>"; };
 		7F52662F1CB4A21400A9DD03 /* BBJTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBJTableViewController.h; sourceTree = "<group>"; };
 		7F5266301CB4A21400A9DD03 /* BBJTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBJTableViewController.m; sourceTree = "<group>"; };
 		7F5266321CB4A66900A9DD03 /* BBJTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBJTableViewCell.h; sourceTree = "<group>"; };
@@ -261,6 +270,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7F3069F61D6D833D001C10F2 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				7F3069F71D6D8356001C10F2 /* DataBase.h */,
+				7F3069F81D6D8356001C10F2 /* DataBase.m */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
 		7F52662B1CB4A1BB00A9DD03 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +437,10 @@
 				7F7FB7021D6C21C0003F5FAC /* DetailWebModel.m */,
 				7F7FB7041D6C3576003F5FAC /* DetailImageWebModel.h */,
 				7F7FB7051D6C3576003F5FAC /* DetailImageWebModel.m */,
+				7F3069FA1D6D8CD9001C10F2 /* CollectModel.h */,
+				7F3069FB1D6D8CD9001C10F2 /* CollectModel.m */,
+				7F3069FD1D6D8EB5001C10F2 /* PhotoCollectModel.h */,
+				7F3069FE1D6D8EB5001C10F2 /* PhotoCollectModel.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -646,6 +668,7 @@
 		7F65921F1CAFF79700C713CC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7F3069F61D6D833D001C10F2 /* DataBase */,
 				7F5266611CB4B6B500A9DD03 /* Post */,
 				7F52662B1CB4A1BB00A9DD03 /* Activity */,
 				7F52662C1CB4A1BB00A9DD03 /* Communication */,
@@ -1029,7 +1052,9 @@
 				7FC61A051CF3F71A00838A51 /* UIView+SDExtension.m in Sources */,
 				7F7FB7061D6C3576003F5FAC /* DetailImageWebModel.m in Sources */,
 				7FC619FF1CF3F71A00838A51 /* TAAbstractDotView.m in Sources */,
+				7F3069FF1D6D8EB5001C10F2 /* PhotoCollectModel.m in Sources */,
 				7FC61A081CF45ECE00838A51 /* NewData.m in Sources */,
+				7F3069FC1D6D8CD9001C10F2 /* CollectModel.m in Sources */,
 				7F6591F11CAF630400C713CC /* ViewController.m in Sources */,
 				7F6592271CAFF8F700C713CC /* BBJNavigationBar.m in Sources */,
 				7F5266601CB4B53400A9DD03 /* ProfileViewController.m in Sources */,
@@ -1040,6 +1065,7 @@
 				7FC61A2A1CF57F0C00838A51 /* Photo.m in Sources */,
 				7FC61A001CF3F71A00838A51 /* TAAnimatedDotView.m in Sources */,
 				7FC61A1B1CF53BFB00838A51 /* ImagesCell.m in Sources */,
+				7F3069F91D6D8356001C10F2 /* DataBase.m in Sources */,
 				7FC61A151CF462DC00838A51 /* NSString+Extension.m in Sources */,
 				7FC619E81CF2F2C700838A51 /* DataModel.m in Sources */,
 				7F6591EB1CAF630400C713CC /* main.m in Sources */,

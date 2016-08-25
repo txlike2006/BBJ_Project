@@ -20,6 +20,8 @@
 #import "BigImageCell.h"
 #import "TopCell.h"
 
+#import "NewsDetailViewController.h"
+
 
 @interface SociologyViewController ()<SDCycleScrollViewDelegate>
 
@@ -220,6 +222,21 @@
     }
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    DataModel *data = self.totalArray[indexPath.row];
+    
+    NSString *ID = [NewsCell idForRow:data];
+    
+    if ([ID isEqualToString:@"NewsCell"]) {
+        NewsDetailViewController *detailVC = [[NewsDetailViewController alloc] init];
+        detailVC.dataModel = self.totalArray[indexPath.row];
+        detailVC.view.backgroundColor = [UIColor whiteColor];
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
+}
 
 
 @end

@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import "SCNavTabBar.h"
 #import "SociologyViewController.h"
+#import "BBJNavigationViewController.h"
 
 @interface MainTimelineViewController ()<SCNavTabBarDelegate,UIScrollViewDelegate>
 
@@ -91,7 +92,8 @@
     
     for (int i = 1; i < contentarray.count; i++) {
         SociologyViewController *test = [[SociologyViewController alloc] init];
-        [_subViewControllers addObject:test];
+        UINavigationController *testNav = [[UINavigationController alloc] initWithRootViewController:test];
+        [_subViewControllers addObject:testNav];
     }
 }
 
@@ -118,7 +120,7 @@
     [self.titleCollectionView scrollViewDidScroll:scrollView];
     /** 当scrollview滚动的时候加载当前视图 */
     UIViewController *viewController = (UIViewController *)_subViewControllers[_currentIndex];
-    viewController.view.frame = CGRectMake(_currentIndex * SCREEN_WIDTH, 0, SCREEN_WIDTH, _mainView.frame.size.height);
+    viewController.view.frame = CGRectMake(_currentIndex * SCREEN_WIDTH, -40, SCREEN_WIDTH, _mainView.frame.size.height);
     [_mainView addSubview:viewController.view];
     [self addChildViewController:viewController];
     
