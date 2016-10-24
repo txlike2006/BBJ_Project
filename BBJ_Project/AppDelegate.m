@@ -62,7 +62,10 @@
     
     self.tabbarController.bbjTabBarControllerDelegate = self;
     
-    BBJNavigationViewController *navigatioinController = [[BBJNavigationViewController alloc] initWithRootViewController:self.tabbarController];
+//    BBJNavigationViewController *navigatioinController = [[BBJNavigationViewController alloc] initWithRootViewController:self.tabbarController];
+    
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:self.tabbarController];
     
 //    PostSelectViewController *selectViewController = [PostSelectViewController new];
 //    
@@ -74,7 +77,7 @@
 //                               hidePostButton:NO];
     
     
-    self.window.rootViewController = navigatioinController;
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
 }
 

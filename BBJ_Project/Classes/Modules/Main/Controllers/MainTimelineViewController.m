@@ -14,6 +14,9 @@
 #import "SociologyViewController.h"
 #import "BBJNavigationViewController.h"
 
+#import "STDBTool.h"
+
+
 @interface MainTimelineViewController ()<SCNavTabBarDelegate,UIScrollViewDelegate>
 
 @property (nonatomic ,strong) UIView *baseView;
@@ -49,6 +52,8 @@
     [self addTitleCollectionView];
     [self addBottomViewControllers];
     [self addMainView];
+    
+    [self testDataBase];
 }
 
 - (void)addTitleCollectionView
@@ -92,10 +97,34 @@
     
     for (int i = 1; i < contentarray.count; i++) {
         SociologyViewController *test = [[SociologyViewController alloc] init];
-        UINavigationController *testNav = [[UINavigationController alloc] initWithRootViewController:test];
-        [_subViewControllers addObject:testNav];
+//        UINavigationController *testNav = [[UINavigationController alloc] initWithRootViewController:test];
+        [_subViewControllers addObject:test];
     }
 }
+
+
+- (void)testDataBase
+{
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [STDBTool shareInstance];
+        [self insertData];
+    });
+
+}
+
+- (void)insertData{
+    NSMutableArray * sqlList = @[].mutableCopy;
+    for (int i = 0 ;i < 1000000;i ++) {
+        NSString * sql = [NSString stringWithFormat:@"INSERT INTO %@ (bookId,file_version,hot_sort,pic,name,path,time) VALUES (%d,'%@','%@','%@','%@','%@',%f)",ST_TB_NAME_BOOKINFO,i,@"2",@"2.0.1",@"pic",@"网络小说",@"path",[[NSDate date]timeIntervalSince1970]];
+        [sqlList addObject:sql];
+    }
+    NSLog(@"无事务处理开始插入数据%@",[NSDate date]);
+    [[STDBTool shareInstance]executeSQLList:sqlList withBlock:^(BOOL bRet, NSString *msg) {
+        NSLog(@"无事务处理插入完成数据%@",[NSDate date]);
+    }];;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -120,7 +149,7 @@
     [self.titleCollectionView scrollViewDidScroll:scrollView];
     /** 当scrollview滚动的时候加载当前视图 */
     UIViewController *viewController = (UIViewController *)_subViewControllers[_currentIndex];
-    viewController.view.frame = CGRectMake(_currentIndex * SCREEN_WIDTH, -40, SCREEN_WIDTH, _mainView.frame.size.height);
+    viewController.view.frame = CGRectMake(_currentIndex * SCREEN_WIDTH, 0, SCREEN_WIDTH, _mainView.frame.size.height);
     [_mainView addSubview:viewController.view];
     [self addChildViewController:viewController];
     
